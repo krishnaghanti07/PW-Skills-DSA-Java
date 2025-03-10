@@ -12,14 +12,17 @@ public class MostOccuringCharacter002 {
         for(int i=0 ; i<str.length() ; i++) {
             arr[(int)(str.charAt(i)-97)] += 1 ;
         }
-        int max = 0 ;
-        int idx = 0 ;
+        int max = -1 ;
         for(int i=0 ; i<26 ; i++) {
             if (arr[i] > max) {
                 max = arr[i] ;
-                idx = i ;
             }
         }
-        System.out.println("The most occuring element is : "+ (char)(idx+97));
+        System.out.print("The most occuring elements are : ");
+        for (int i=0 ; i<26 ; i++) {
+            if (arr[i] == max) {
+                System.out.print((char)(i+97) + " ");
+            }
+        }
     }
 }
