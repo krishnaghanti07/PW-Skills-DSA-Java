@@ -24,6 +24,7 @@ public class StringCompression003 {
         sb.append(arr[i]) ;
         int len = j-i ;
         if (len > 1) sb.append(len) ;
+        
         for (i=0 ; i<sb.length() ; i++) {
             arr[i] = sb.charAt(i) ;
         }
